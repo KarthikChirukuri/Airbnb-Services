@@ -1,0 +1,57 @@
+<% layout("/layouts/boilerplate") %>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New WanderLust</title>
+</head>
+<body>
+    <div class="row">
+        <div class="col-8 offset-2">
+    <h1>Create a New Listing</h1>
+    <form method="post" action="/listings" novalidate class="needs-validation" enctype="multipart/form-data">
+        <div class="mb-3">
+            <label for="title" class="form-label">Title</label> <br>
+            <input placeholder="Enter a catchy title" name="title"  class="form-control" type="text" required>
+            <div class="valid-feedback">Title Looks good</div>
+            <div class="invalid-feedback">Give a valid Title</div>
+        </div>
+        <div class="mb-3">
+            <label for="description" class="form-label">description</label> <br>
+            <textarea placeholder="Enter Description" name="description" class="form-control" required></textarea>
+            <div class="invalid-feedback">Give a valid description</div>
+        </div>
+        <div class="mb-3">
+            <label for="image" class="form-label">Upload Listing Image</label> <br>
+            <input type="file" name="image" class="form-control">
+            required
+        </div>
+        <!--<div class="mb-3">
+            <label for="image" class="form-label">Image</label> <br>
+            <input placeholder="enter URL" name="image" class="form-control">
+        </div> -->
+        <div class="row">
+            <div class="mb-3 col-md-4">
+                <label for="price" class="form-label">Price</label> <br>
+                <input placeholder="Enter Price(1200)" name="price" class="form-control" required>
+                <div class="invalid-feedback">Give a valid Price</div>
+            </div>
+            <div class="mb-3 col-md-8">
+                <label for="country" class="form-label">Country</label> <br>
+                <input placeholder="Enter Country" name="country" class="form-control" required>
+                <div class="invalid-feedback">Enter a valid Country</div>
+            </div>
+        </div>
+        <div class="mb-3">
+            <label for="location" class="form-label">location</label> <br>
+            <input placeholder="Enter Location(bengaluru)" name="location" class="form-control" required>
+            <div class="invalid-feedback">Enter a valid Location</div>
+        </div>
+        <button class="btn btn-dark add-btn">Submit</button>
+        <br><br><br>
+    </form>
+    </div>
+    </div>
+</body>
+</html>
